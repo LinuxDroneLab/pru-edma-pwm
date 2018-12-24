@@ -43,7 +43,7 @@ Per il controllo motori, lo scenario che si ipotizza è il seguente:
 * Il controllore di volo definisce il canale e due buffer sorgenti da usare in modalità ping/pong (cache a due livelli) con la DMA.
 * La PRU configura EDMA (ParameterSet)
 * Il controllore di volo scrive sul buffer corrente (es. ping) i valori richiesti per il motore
-* EDMA trasferisce su PWM il secondo buffer (es. pong) su PWM
+* EDMA trasferisce su PWM il secondo buffer (es. pong)
 * EDMA invia interrupt al controllore di volo al termine del trasferimento ed inizia il trasferimento del primo buffer (es. ping)
 * Il controllore di volo esegue il reset dell'interrupt e trasferisce nel secondo buffer (es. pong) i nuovi dati richiesti.
 
